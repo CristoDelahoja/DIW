@@ -51,21 +51,23 @@
 
     <h2>Formulario de Acceso</h2>
     <form action="/login" method="POST">
-        <label for="username">Nombre de Usuario</label>
+        <label for="username">Usuario</label>
         <input type="text" id="username" name="username" placeholder="Escribe tu nombre de usuario" required>
 
         <label for="password">Contraseña</label>
         <input type="password" id="password" name="password" placeholder="Escribe tu contraseña" required>
 
-        <button type="submit">Iniciar sesión</button>
+        <button type="submit">Enviar</button>
     </form>
+
     <hr>
+    
     <h2>Compra de Pasajes de Barco</h2>
     <form action="/comprar-pasaje" method="POST">
-        <label for="nombre">Nombre</label>
+        <label for="nombre">Usuario</label>
         <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
 
-        <label for="clase">Clase de Pasaje</label>
+        <label for="clase">Tipo de Pasaje</label>
         <select id="clase" name="clase">
             <option value="0">VIP</option>
             <option value="1">Especial</option>
@@ -73,9 +75,11 @@
             <option value="3">Segunda</option>
         </select>
 
-        <button type="submit">Comprar Pasaje</button>
+        <button type="submit">Enviar</button>
     </form>
+
     <hr>
+
     <h2>Compra de Artículo con Entrega</h2>
     <form action="/proceso-compra" method="GET">
         <label for="articulo">Nombre del Artículo</label>
@@ -89,6 +93,8 @@
 
         <button type="submit">Finalizar Compra</button>
     </form>
+
+    <hr>
 
     <h2>Formulario de Matrícula en Escuela</h2>
     <form action="/matricula" method="POST">
@@ -106,6 +112,8 @@
         <button type="submit">Matricularse</button>
     </form>
 
+    <hr>
+
     <h2>Formulario de Contacto</h2>
     <form action="/contacto" method="POST">
         <input type="hidden" name="pagina" value="página de contacto">
@@ -121,6 +129,8 @@
 
         <button type="submit">Enviar Mensaje</button>
     </form>
+
+    <hr>
 
     <h2>Reserva de Habitación de Hotel</h2>
     <form action="/reserva-hotel" method="POST">
@@ -139,6 +149,8 @@
         <button type="submit">Reservar Habitación</button>
     </form>
 
+    <hr>
+
     <h2>Registro de Usuario</h2>
     <form action="/registro" method="POST">
         <input type="hidden" name="tipo-usuario" value="usuario-nuevo">
@@ -156,6 +168,8 @@
         <button type="reset">Restablecer</button>
     </form>
 
+    <hr>
+
     <h2>Formulario de Compra de Frutas</h2>
     <form action="/compra-frutas" method="GET">
         <label for="fruta">Fruta</label>
@@ -171,6 +185,8 @@
         <button type="submit">Comprar</button>
     </form>
 
+    <hr>
+
     <h2>Formulario de Compra de Vino</h2>
     <form action="/compra-vino" method="GET">
         <label for="botellas">Número de Botellas (3, 6, 9)</label>
@@ -178,6 +194,8 @@
 
         <button type="submit">Comprar Vino</button>
     </form>
+
+    <hr>
 
     <h2>Alta como Programador</h2>
     <form action="/alta-programador" method="POST">
