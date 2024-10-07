@@ -6,43 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipos de Formularios</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        h2 {
-            text-align: center;
-            margin-top: 50px;
-        }
-
         form {
-            width: 300px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px 0px #ccc;
+            margin-bottom: 20px;
         }
 
-        input,
-        select,
+        #id1 input,
+        #id2 input,
+        #id5 input,
+        #id6 input,
+        #id7 input,
+        #id8 input,
+        #id9 input,
+        label,
         textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            display: block;
+            margin-bottom: 10px;
         }
 
-        button {
-            width: 100%;
+        #id3 input,
+        #id4 input,
+        #id10 input {
+            margin-top: 10px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        form div {
+            margin-bottom: 10px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        fieldset {
+            max-width: 400px;
+            margin-bottom: 20px;
             padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
         }
     </style>
 </head>
@@ -50,184 +54,200 @@
 <body>
 
     <h2>Formulario de Acceso</h2>
-    <form action="/login" method="POST">
-        <label for="username">Usuario</label>
-        <input type="text" id="username" name="username" placeholder="Escribe tu nombre de usuario" required>
-
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" placeholder="Escribe tu contraseña" required>
-
-        <button type="submit">Enviar</button>
+    <form id="id1" action="procesar.php" method="POST">
+        <div>
+            <label for="username">Usuario</label>
+            <input type="text" id="username" name="username" placeholder="a10af" required>
+        </div>
+        <div>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="******" required>
+        </div>
+        <input type="submit" value="Enviar">
     </form>
 
-    <hr>
-    
     <h2>Compra de Pasajes de Barco</h2>
-    <form action="/comprar-pasaje" method="POST">
-        <label for="nombre">Usuario</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
-
-        <label for="clase">Tipo de Pasaje</label>
-        <select id="clase" name="clase">
-            <option value="0">VIP</option>
-            <option value="1">Especial</option>
-            <option value="2">Primera</option>
-            <option value="3">Segunda</option>
-        </select>
-
-        <button type="submit">Enviar</button>
+    <form id="id2" action="procesar.php" method="POST">
+        <div>
+            <label for="nombrePasajero">Usuario</label>
+            <input type="text" id="nombrePasajero" name="nombre" placeholder="Nombre del viajero" required>
+        </div>
+        <div>
+            <label for="clase">Tipo de pasaje</label>
+            <select id="clase" name="clase">
+                <option value="0">VIP</option>
+                <option value="1">Especial</option>
+                <option value="2">Primera</option>
+                <option value="3">Segunda</option>
+            </select>
+        </div>
+        <input type="submit" value="Enviar">
     </form>
-
-    <hr>
 
     <h2>Compra de Artículo con Entrega</h2>
-    <form action="/proceso-compra" method="GET">
-        <label for="articulo">Nombre del Artículo</label>
-        <input type="text" id="articulo" name="articulo" placeholder="Escribe el nombre del artículo" required>
+    <form id="id3" action="procesar.php" method="GET">
+        <div>
+            <label for="articulo">Artículo</label>
+            <input type="text" id="articulo" name="articulo" placeholder="Artículo" required>
+        </div>
+        <div>
+            <label>Forma de entrega:</label><br>
+            <label for="envio">Envío a domicilio</label>
+            <input type="radio" id="envio" name="entrega" value="envio">
 
-        <label>Forma de Entrega</label>
-        <input type="radio" id="recogida" name="entrega" value="recogida" required>
-        <label for="recogida">Recogida en tienda</label><br>
-        <input type="radio" id="envio" name="entrega" value="envio" required>
-        <label for="envio">Envío a domicilio</label>
-
-        <button type="submit">Finalizar Compra</button>
+            <label for="recogida">Recogida en tienda</label>
+            <input type="radio" id="recogida" name="entrega" value="recogida" checked>
+        </div>
+        <input type="submit" value="Enviar">
     </form>
-
-    <hr>
 
     <h2>Formulario de Matrícula en Escuela</h2>
-    <form action="/matricula" method="POST">
-        <label for="matricula">Número de Matrícula</label>
-        <input type="text" id="matricula" name="matricula" pattern="M[0-9]{3}" placeholder="Ej: M001" required>
+    <form id="id4" action="procesar.php" method="POST">
+        <div>
+            <label for="matricula">Número de matrícula</label>
+            <input type="text" id="matricula" name="matricula" placeholder="Matrícula" required>
+        </div>
+        <div>
+            <label>Materias</label><br>
+            <label for="matematicas">Matemáticas</label>
+            <input type="checkbox" id="matematicas" name="materias" value="Matemáticas">
 
-        <label for="materias">Materias</label>
-        <select id="materias" name="materias" multiple required>
-            <option value="Matemáticas">Matemáticas</option>
-            <option value="Algoritmia">Algoritmia</option>
-            <option value="Sistemas">Sistemas</option>
-            <option value="Robótica">Robótica</option>
-        </select>
+            <label for="algoritmia">Algoritmia</label>
+            <input type="checkbox" id="algoritmia" name="materias" value="Algoritmia">
 
-        <button type="submit">Matricularse</button>
+            <label for="sistemas">Sistemas</label>
+            <input type="checkbox" id="sistemas" name="materias" value="Sistemas">
+
+            <label for="robotica">Robótica</label>
+            <input type="checkbox" id="robotica" name="materias" value="Robótica">
+        </div>
+        <input type="submit" value="Enviar">
     </form>
-
-    <hr>
 
     <h2>Formulario de Contacto</h2>
-    <form action="/contacto" method="POST">
-        <input type="hidden" name="pagina" value="página de contacto">
-
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Escribe tu email" required>
-
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="10" cols="40" placeholder="Escribe tu mensaje"></textarea>
-
-        <button type="submit">Enviar Mensaje</button>
+    <form id="id5" action="procesar.php" method="POST">
+        <div>
+            <label for="nombreContacto">Nombre</label>
+            <input type="text" id="nombreContacto" name="nombre" placeholder="nombre" required>
+        </div>
+        <div>
+            <label for="emailContacto">E-mail</label>
+            <input type="email" id="emailContacto" name="email" placeholder="mail válido" required>
+        </div>
+        <div>
+            <label for="mensaje">Escriba su mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
+        </div>
+        <input type="submit" value="Enviar">
     </form>
-
-    <hr>
 
     <h2>Reserva de Habitación de Hotel</h2>
-    <form action="/reserva-hotel" method="POST">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
-
-        <label for="personas">Número de Personas</label>
-        <input type="number" id="personas" name="personas" required>
-
-        <label for="inicio">Fecha de Inicio</label>
-        <input type="date" id="inicio" name="inicio" required>
-
-        <label for="final">Fecha de Fin</label>
-        <input type="date" id="final" name="final" required>
-
-        <button type="submit">Reservar Habitación</button>
+    <form id="id6" action="procesar.php" method="POST">
+        <div>
+            <label for="nombreHotel">Nombre</label>
+            <input type="text" id="nombreHotel" name="nombre" placeholder="nombre" required>
+        </div>
+        <div>
+            <label for="emailHotel">E-mail</label>
+            <input type="email" id="emailHotel" name="email" placeholder="personas" required>
+        </div>
+        <div>
+            <label for="inicio">Fecha de llegada</label>
+            <input type="date" id="inicio" name="inicio" required>
+        </div>
+        <div>
+            <label for="final">Fecha de salida</label>
+            <input type="date" id="final" name="final" required>
+        </div>
+        <input type="submit" value="Enviar">
     </form>
-
-    <hr>
 
     <h2>Registro de Usuario</h2>
-    <form action="/registro" method="POST">
-        <input type="hidden" name="tipo-usuario" value="usuario-nuevo">
-
-        <label for="alias">Alias</label>
-        <input type="text" id="alias" name="alias" placeholder="Escribe tu alias" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Escribe tu email" required>
-
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu teléfono">
-
-        <button type="submit">Registrar</button>
-        <button type="reset">Restablecer</button>
+    <form id="id7" action="procesar.php" method="POST">
+        <div>
+            <label for="alias">Alias</label>
+            <input type="text" id="alias" name="alias" placeholder="alias" required>
+        </div>
+        <div>
+            <label for="emailRegistro">E-mail</label>
+            <input type="email" id="emailRegistro" name="email" placeholder="e-mail" required>
+        </div>
+        <div>
+            <label for="telefonoRegistro">Teléfono</label>
+            <input type="tel" id="telefonoRegistro" name="telefono" placeholder="teléfono">
+        </div>
+        <input type="submit" value="Enviar">
     </form>
-
-    <hr>
 
     <h2>Formulario de Compra de Frutas</h2>
-    <form action="/compra-frutas" method="GET">
-        <label for="fruta">Fruta</label>
-        <select id="fruta" name="fruta">
-            <option value="manzanas">Manzanas</option>
-            <option value="naranjas">Naranjas</option>
-            <option value="mandarinas">Mandarinas</option>
-        </select>
-
-        <label for="cantidad">Cantidad (ejemplo: 1 ud, 2 kg, 100 gr)</label>
-        <input type="text" id="cantidad" name="cantidad" pattern="[0-9]+ (ud|kg|gr)" placeholder="Ej: 1 ud" required>
-
-        <button type="submit">Comprar</button>
+    <form id="id8" action="procesar.php" method="GET">
+        <div>
+            <label for="fruta">Fruta</label>
+            <select id="fruta" name="fruta">
+                <option value="manzanas">Manzanas</option>
+                <option value="naranjas">Naranjas</option>
+                <option value="mandarinas">Mandarinas</option>
+            </select>
+        </div>
+        <div>
+            <label for="cantidad">Cantidad</label>
+            <input type="text" id="cantidad" name="cantidad" placeholder="número unidad" required>
+        </div>
+        <input type="submit" value="Enviar">
     </form>
-
-    <hr>
 
     <h2>Formulario de Compra de Vino</h2>
-    <form action="/compra-vino" method="GET">
-        <label for="botellas">Número de Botellas (3, 6, 9)</label>
-        <input type="number" id="botellas" name="botellas" min="3" step="3" required>
-
-        <button type="submit">Comprar Vino</button>
+    <form id="9" action="procesar.php" method="GET">
+        <div>
+            <label for="botellas">Número de botellas (en lotes de 3)</label>
+            <input type="number" id="botellas" name="botellas" min="3" step="3" placeholder="botellas" required>
+        </div>
+        <input type="submit" value="Enviar">
     </form>
 
-    <hr>
-
     <h2>Alta como Programador</h2>
-    <form action="/alta-programador" method="POST">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
-
+    <form id="10" action="procesar.php" method="POST">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="nombre" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="mail" required>
+        </div>
+        <div>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Su teléfono">
+        </div>
         <fieldset>
-            <legend>Lenguajes de Programación</legend>
+            <legend>Lenguajes que conoce</legend>
+
+            <label for="javascript">Javascript</label><br>
             <input type="checkbox" id="javascript" name="lenguajes" value="javascript">
-            <label for="javascript">JavaScript</label><br>
-            <input type="checkbox" id="php" name="lenguajes" value="php">
+
             <label for="php">PHP</label><br>
-            <input type="checkbox" id="python" name="lenguajes" value="python">
-            <label for="python">Python</label><br>
+            <input type="checkbox" id="php" name="lenguajes" value="php">
+
+            <label for="nodejs">NodeJS</label><br>
             <input type="checkbox" id="nodejs" name="lenguajes" value="nodejs">
-            <label for="nodejs">NodeJS</label>
+
+            <label for="python">Python</label><br>
+            <input type="checkbox" id="python" name="lenguajes" value="python">
         </fieldset>
 
-        <label for="ingles">Nivel de Inglés</label>
-        <select id="ingles" name="ingles">
-            <option value="bajo">Bajo</option>
-            <option value="medio">Medio</option>
-            <option value="alto">Alto</option>
-        </select>
+        <div>
+            <label for="nivel">Nivel de Inglés</label><br>
 
-        <label for="ciudad">Ciudad (Opcional)</label>
-        <input type="text" id="ciudad" name="ciudad">
+            <label for="bajo">Bajo</label><br>
+            <input type="radio" id="bajo" name="ingles" value="bajo" checked>
 
-        <label for="telefono">Teléfono (Opcional)</label>
-        <input type="tel" id="telefono" name="telefono">
+            <label for="medio">Medio</label><br>
+            <input type="radio" id="medio" name="ingles" value="medio">
 
-        <button type="submit">Darse de Alta</button>
+            <label for="alto">Alto</label>
+            <input type="radio" id="alto" name="ingles" value="alto">
+        </div>
+        <input type="submit" value="Enviar">
     </form>
 
 </body>
