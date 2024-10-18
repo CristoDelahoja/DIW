@@ -50,7 +50,7 @@ table {
     margin: 20px auto;
     border-collapse: collapse;
     border: 1px solid black;
-    color:green;
+    color: green;
 }
 
 
@@ -70,15 +70,12 @@ td {
 th.especial,
 .strong2,
 .titulofila1 {
-    color: #eeff00;
+    color: #f0ff20;
 }
 
-tfoot th {
-    color: #8B0000;
-}
-
-tfoot td {
-    color: #8B0000;
+tfoot th,
+#rojo {
+    color: #d80000;
 }
 
 .titulotabla {
