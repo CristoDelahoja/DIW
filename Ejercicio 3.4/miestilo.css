@@ -1,0 +1,60 @@
+h1 {
+    color: green;
+    font-size: small;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+.horas {
+    background-color: green;
+}
+
+.recreo {
+    background-color: yellow;
+    text-align: center;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: red;
+}
+
+a:link {
+    color: green;
+}
+
+.viernes:hover {
+    font-size: 2em;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th:first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+form {
+    width: 50%;
+    margin-left: 530px;
+    margin-top: 10px;
+}
+
+input {
+    border-color: red;
+}
+
+.asterisco {
+    color: red;
+}
