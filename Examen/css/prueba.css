@@ -1,0 +1,81 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f3f8;
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    color: #ddd;
+}
+
+/* Contenedor principal de las tarjetas */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+/* Estilos para las tarjetas */
+.card {
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    border: 2px solid #4CAF50; /* Color de borde al hacer hover */
+}
+
+/* Texto dentro de las tarjetas */
+.card h3 {
+    color: #4CAF50;
+    padding: 10px 0;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: #ddd;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #4CAF50;
+}

@@ -1,0 +1,51 @@
+/*Cristóbal Muñoz Granado*/
+
+@import url('https://fonts.googleapis.com/css2?family=Monserrat:wght@100&display=swap');
+
+img {
+    max-width: 50%;
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #a9065d;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #0b0a0a;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    padding: 10px;
+    color: gray;
+
+}
+
+main {
+    margin-top: 40px;
+}
