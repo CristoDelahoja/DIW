@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abejas y Zánganos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>ABEJAS Y ZÁNGANOS</h1>
+        <nav>
+            <a href="#">Productos</a>
+            <a href="#">Carrito</a>
+            <a href="#">¿Quiénes somos?</a>
+            <a href="#">Registro</a>
+        </nav>
+        <img src="logo.png" alt="Logo" class="logo">
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <h2>Tu carrito</h2>
+            <p class="continue-shopping"><a href="#">Continúa comprando</a></p>
+            <div class="cart-table">
+                <div class="cart-header">
+                    <span>PRODUCTO</span>
+                    <span>Cantidad</span>
+                    <span>TOTAL</span>
+                </div>
+                <div class="cart-item">
+                    <div class="product-info">
+                        <div class="product-image"></div>
+                        <span>Caramelos de miel</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button>-</button>
+                        <input type="text" value="1">
+                        <button>+</button>
+                        <button class="remove">🗑️</button>
+                    </div>
+                    <span class="price">0,75€</span>
+                </div>
+                <div class="cart-summary">
+                    <p>Subtotal 0,75€</p>
+                    <p>Impuestos incluidos</p>
+                    <button class="checkout-btn">Verificar compra</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="suggested-products">
+            <h3>Puede que también te guste</h3>
+            <div class="suggested-items">
+                <div class="suggested-item">
+                    <div class="suggested-image"></div>
+                    <p>Producto 1</p>
+                </div>
+                <div class="suggested-item">
+                    <div class="suggested-image"></div>
+                    <p>Producto 2</p>
+                </div>
+                <div class="suggested-item">
+                    <div class="suggested-image"></div>
+                    <p>Producto 3</p>
+                </div>
+                <div class="suggested-item">
+                    <div class="suggested-image"></div>
+                    <p>Producto 4</p>
+                </div>
+            </div>
+            <button class="view-all-btn">Ver todos</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><span>📍</span> Sierra de Gata, España</p>
+                <p><span>✉️</span> <a
+                        href="mailto:info@apicultoresgatasierradegata.com">info@apicultoresgatasierradegata.com</a></p>
+                <p><span>📞</span> +34 123 456 789</p>
+                <p>© 2024 Asociación de Apicultores de la Sierra de Gata. Todos los derechos reservados.</p>
+            </div>
+            <div class="social-media">
+                <p>Redes Sociales</p>
+                <a href="#">X</a>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+            <div class="subscription">
+                <label for="country">País/Country</label>
+                <select id="country">
+                    <option>España</option>
+                </select>
+                <label for="email">Subscribete</label>
+                <input type="email" id="email" placeholder="Email">
+                <div class="payment-methods">
+                    <img src="visa.png" alt="Visa">
+                    <img src="paypal.png" alt="Paypal">
+                    <img src="mastercard.png" alt="Mastercard">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
