@@ -4,81 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abejas y Zánganos</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Abejas y Zánganos - Carrito</title>
+    <link rel="stylesheet" href="3.css">
 </head>
 
 <body>
+
     <header>
-        <img src="logo.png" alt="Logo" class="logo">
-        <h1>ABEJAS Y ZÁNGANOS</h1>
+        <div class="header-content">
+            <img src="Logo abejas.png" alt="Logo" class="logo">
+            <h1>ABEJAS Y ZÁNGANOS</h1>
+            <img src="Logo abejas.png" alt="Logo" class="logo">
+        </div>
         <nav>
-            <a href="#">Productos</a>
-            <a href="#">Carrito</a>
-            <a href="#">¿Quiénes somos?</a>
-            <a href="#">Registro</a>
+            <a href="2.html">Productos</a>
+            <a href="3.html">Carrito</a>
+            <a href="4.html">¿Quiénes somos?</a>
+            <a href="5.html">Registro</a>
         </nav>
-        <img src="logo.png" alt="Logo" class="logo">
     </header>
 
-    <main>
-        <section class="cart-section">
-            <h2>Tu carrito</h2>
-            <p class="continue-shopping"><a href="#">Continúa comprando</a></p>
-            <div class="cart-table">
-                <div class="cart-header">
-                    <span>PRODUCTO</span>
-                    <span>Cantidad</span>
-                    <span>TOTAL</span>
-                </div>
-                <div class="cart-item">
-                    <div class="product-info">
-                        <div class="product-image"></div>
-                        <span>Caramelos de miel</span>
-                    </div>
-                    <div class="quantity-control">
-                        <button>-</button>
-                        <input type="text" value="1">
-                        <button>+</button>
-                        <button class="remove">🗑️</button>
-                    </div>
-                    <span class="price">0,75€</span>
-                </div>
-                <div class="cart-summary">
-                    <p>Subtotal 0,75€</p>
-                    <p>Impuestos incluidos</p>
-                    <button class="checkout-btn">Verificar compra</button>
-                </div>
-            </div>
-        </section>
+    <section class="carrito">
+        <h2>Tu carrito</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>PRODUCTO</th>
+                    <th>Cantidad</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="product-details">
+                            <div class="product-image"></div>
+                            <span>Caramelos de miel</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="quantity-control">
+                            <button>-</button>
+                            <input type="number" value="1">
+                            <button>+</button>
+                            <button class="delete">🗑️</button>
+                        </div>
+                    </td>
+                    <td>0,75€</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="subtotal">
+            <span>Subtotal 0,75€</span><br>
+            <small>Impuestos incluidos</small>
+        </div>
+        <button class="checkout">Verificar compra</button>
+    </section>
 
-        <section class="suggested-products">
-            <h3>Puede que también te guste</h3>
-            <div class="suggested-items">
-                <div class="suggested-item">
-                    <div class="suggested-image"></div>
-                    <p>Producto 1</p>
-                </div>
-                <div class="suggested-item">
-                    <div class="suggested-image"></div>
-                    <p>Producto 2</p>
-                </div>
-                <div class="suggested-item">
-                    <div class="suggested-image"></div>
-                    <p>Producto 3</p>
-                </div>
-                <div class="suggested-item">
-                    <div class="suggested-image"></div>
-                    <p>Producto 4</p>
-                </div>
+    <section class="recomendados">
+        <h2>Puede que también te guste</h2>
+        <div class="suggested-products">
+            <div class="product-card">
+                <img src="https://www.mieldeleon.com/wp-content/uploads/2023/06/16.jpg" alt="Crema de Miel">
+                <span>Crema de Miel</span>
             </div>
-            <button class="view-all-btn">Ver todos</button>
-        </section>
-    </main>
+            <div class="product-card">
+                <img src="https://cereria-pinsart.com/wp-content/uploads/2021/10/velas-de-cera-de-abeja-12-horas-cereria-pinsart-02.jpg"
+                    alt="Velas de Cera de Abeja">
+                <span>Velas de Cera de Abeja</span>
+            </div>
+            <div class="product-card">
+                <img src="https://www.dia.es/product_images/146093/146093_ISO_0_ES.jpg" alt="Jalea Real">
+                <span>Jalea Real</span>
+            </div>
+            <div class="product-card">
+                <img src="https://va.nice-cdn.com/upload/image/product/large/default/medex-propolis-oral-junior-30-ml-1157276-es.jpg"
+                    alt="Própolis">
+                <span>Própolis</span>
+            </div>
+        </div>
+        <button class="ver-todos">Ver todos</button>
+    </section>
 
     <footer>
         <div class="footer-content">
             <div class="contact-info">
+                <h1>Contacto</h1>
                 <p><span>📍</span> Sierra de Gata, España</p>
                 <p><span>✉️</span> <a
                         href="mailto:info@apicultoresgatasierradegata.com">info@apicultoresgatasierradegata.com</a></p>
@@ -86,26 +97,23 @@
                 <p>© 2024 Asociación de Apicultores de la Sierra de Gata. Todos los derechos reservados.</p>
             </div>
             <div class="social-media">
-                <p>Redes Sociales</p>
-                <a href="#">X</a>
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
+                <h1>Redes Sociales</h1>
+                <a href="#" target="_blank">
+                    <img src="https://i.pinimg.com/736x/2b/a7/17/2ba717ac010d3b9f8d26e9db4da291b8.jpg" alt="X">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="https://e7.pngegg.com/pngimages/672/312/png-clipart-instagram-logo-icon-others-text-photography.png"
+                        alt="Instagram">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="https://e7.pngegg.com/pngimages/213/828/png-clipart-facebook-logo-facebook-messenger-logo-social-media-icon-facebook-icon-blue-text-thumbnail.png"
+                        alt="Facebook">
+                </a>
             </div>
-            <div class="subscription">
-                <label for="country">País/Country</label>
-                <select id="country">
-                    <option>España</option>
-                </select>
-                <label for="email">Subscribete</label>
-                <input type="email" id="email" placeholder="Email">
-                <div class="payment-methods">
-                    <img src="visa.png" alt="Visa">
-                    <img src="paypal.png" alt="Paypal">
-                    <img src="mastercard.png" alt="Mastercard">
-                </div>
-            </div>
+
         </div>
     </footer>
+
 </body>
 
 </html>

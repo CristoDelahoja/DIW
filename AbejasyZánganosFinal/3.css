@@ -6,165 +6,132 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #f7941d;
     color: #333;
-    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #f5a623;
+    background-color: #ff9000;
     color: white;
-    text-align: center;
     padding: 10px 0;
+    text-align: center;
+}
+
+.header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-header h1 {
-    font-size: 24px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
-    margin: 0 20px;
+    width: 130px;
+    height: 130px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
 }
 
 nav a {
-    margin: 0 15px;
-    color: white;
-    text-decoration: none;
-    border: 1px solid white;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.cart-section {
-    background-color: #ff9000;
-    padding: 20px;
-    color: white;
-}
-
-.cart-section h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.continue-shopping a {
-    color: white;
-    text-decoration: underline;
-    float: right;
-}
-
-.cart-table {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
     color: black;
-}
-
-.cart-header,
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-}
-
-.cart-header span {
+    background-color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.product-info {
-    display: flex;
-    align-items: center;
+.carrito {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffd966;
 }
 
-.product-image {
-    width: 40px;
-    height: 40px;
-    background-color: #ccc;
-    margin-right: 10px;
+.cart-table {
+    width: 90%;
+    margin: 0 auto 20px;
+    border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
 }
 
 .quantity-control {
     display: flex;
+    gap: 5px;
     align-items: center;
 }
 
-.quantity-control button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-    margin: 0 5px;
+.subtotal {
+    font-size: 18px;
+    margin: 20px 0;
 }
 
-.quantity-control input {
-    width: 30px;
-    text-align: center;
-    border: 1px solid #ccc;
-    margin: 0 5px;
-}
-
-.cart-summary {
-    text-align: right;
-    margin-top: 20px;
-}
-
-.checkout-btn {
+.checkout {
     background-color: black;
     color: white;
-    border: none;
     padding: 10px 20px;
+    border: none;
     cursor: pointer;
-    font-weight: bold;
+}
+
+.recomendados {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
 }
 
 .suggested-products {
-    background-color: #ff9000;
-    padding: 20px;
-    text-align: center;
-    color: white;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
 }
 
-.suggested-products h3 {
-    font-size: 20px;
+.product-card {
+    background-color: #eee;
+    padding: 20px;
+    width: 120px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     margin-bottom: 10px;
 }
 
-.suggested-items {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+.product-card span {
+    font-size: 14px;
+    color: #333;
 }
 
-.suggested-item {
-    text-align: center;
-}
-
-.suggested-image {
-    width: 80px;
-    height: 80px;
-    background-color: #ccc;
-    margin: 0 auto 10px;
-}
-
-.view-all-btn {
+.ver-todos {
     background-color: black;
     color: white;
+    padding: 8px 15px;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
-    font-weight: bold;
 }
 
 footer {
     background-color: #c89f39;
     padding: 20px;
-    color: white;
-    font-size: 12px;
+    color: #333;
+    font-size: 18px;
 }
 
 .footer-content {
@@ -173,17 +140,31 @@ footer {
 }
 
 .contact-info,
-.social-media,
-.subscription {
+.social-media {
     text-align: center;
+    margin-top: 20px;
 }
 
-.subscription input {
-    padding: 5px;
-    margin-top: 10px;
+.social-media h1 {
+    font-size: 29px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.payment-methods img {
-    width: 30px;
-    margin: 5px;
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 37px;
+    height: 32px;
+}
+
+h1 {
+    color: #333;
+}
+
+.subscription {
+    margin-top: 20px;
 }
