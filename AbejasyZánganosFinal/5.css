@@ -108,6 +108,7 @@ nav a {
     gap: 15px;
     max-width: 400px;
     margin: 0 auto;
+    margin-top: 20px;
 }
 
 .registro-form label {
@@ -173,6 +174,6 @@ h1 {
 }
 
 .social-media img {
-    width: 37px;
-    height: 32px;
+    width: 65px;
+    height: 57px;
 }
