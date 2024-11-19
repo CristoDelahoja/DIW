@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Propiedad padding</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .element::after {
+            content: attr(data-author);
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" style="display: block; margin: 20px 0; text-align: center; color: #0078d4; text-decoration: none;">Volver al índice</a>
+
+    <p class="element" data-author="Soy yo">El autor
+        es </p>
+</body>
+
+</html>
